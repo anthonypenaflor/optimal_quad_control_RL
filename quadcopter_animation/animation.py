@@ -355,12 +355,12 @@ def animate(t, x, y, z, phi, theta, psi, u,
         elif pos[time_index][2] > 0:
             drone.draw(frame, cam, color=(0, 0, 255), pt=2)
         elif len(autopilot_mode) > 0:
-            if autopilot_mode[time_index] == 0 or True:
+            if autopilot_mode[time_index] == 0:
                 drone.draw(frame, cam, color=(255, 0, 0), pt=2)
             else:
                 drone.draw(frame, cam, color=(0, 255, 0), pt=2)
                 cv2.putText(frame, '[gcnet active]', (10, 60),
-                    cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0,255,0))                
+                    cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0,255,0))
         else:
             drone.draw(frame, cam, color=(255, 0, 0), pt=2)
             
